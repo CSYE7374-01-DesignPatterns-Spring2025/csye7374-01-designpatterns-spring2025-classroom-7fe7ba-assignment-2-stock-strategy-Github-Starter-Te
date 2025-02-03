@@ -2,7 +2,7 @@ package edu.neu.csye7374;
 
 /**
  * 
- * @author Yesha
+ * @author Eashan Roy
  * 
  */
 
@@ -11,6 +11,7 @@ public class Driver {
 		System.out.println("============Main Execution Start===================\n\n");
 
          //Add your code in between these two print statements
+		StockMarket.getInstance().startTrading();
 		 
 		System.out.println("\n\n============Main Execution End===================");
 	}

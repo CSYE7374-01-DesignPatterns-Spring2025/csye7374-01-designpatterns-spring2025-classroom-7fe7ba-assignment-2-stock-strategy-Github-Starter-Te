@@ -5,7 +5,7 @@ public class GoogleBearMarketStrategy implements StockPriceStrategy {
     @Override
     public double computePrice(StockAPI stock, double newPrice) {
         double currentPrice = stock.getPrice();
-        // Different logic for Google in a bear market
+
         if (newPrice < currentPrice) {
             // Drop is steeper: e.g., drop an extra 2% of current price
             return newPrice - (0.02 * currentPrice);

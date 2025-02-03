@@ -19,9 +19,9 @@ public class GoogleStock extends StockAPI {
         // Delegate price calculation to the strategy
         double updatedPrice = strategy.computePrice(this, newPrice);
 
-        // Update metrics as desired
+        // Update metrics
         if (updatedPrice > this.getPrice()) {
-            setMetric(getMetric() + 3); // just an example
+            setMetric(getMetric() + 3);
         } else {
             setMetric(getMetric() - 1);
         }

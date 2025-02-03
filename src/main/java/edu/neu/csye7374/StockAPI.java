@@ -25,8 +25,6 @@ public class StockAPI implements Tradable {
 
     // The main setPrice used by child classes
     public void setPrice(double price) {
-        // If needed, update metric or do final logic
-        // We'll rely on children to do Strategy-based calculations.
         this.price = price;
     }
 

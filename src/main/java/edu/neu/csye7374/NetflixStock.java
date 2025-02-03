@@ -19,7 +19,7 @@ public class NetflixStock extends StockAPI {
         // Delegate price calculation to the strategy
         double updatedPrice = strategy.computePrice(this, newPrice);
 
-        // Update metrics as desired
+        // Update metrics
         if (updatedPrice > this.getPrice()) {
             setMetric(getMetric() + 5); // just an example
         } else {

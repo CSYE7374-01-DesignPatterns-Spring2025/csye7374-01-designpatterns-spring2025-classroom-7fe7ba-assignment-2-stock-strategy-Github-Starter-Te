@@ -1,36 +1,54 @@
 package edu.neu.csye7374;
 
 public class StockAPI implements Tradable {
-
+    private String id;
     private String name;
-    private String description;
-    protected double price;
+    private Double price;
+    private String Description;
     private int metric;
 
-    public StockAPI(String name, double price, String description) {
+    public StockAPI(String id, String name, Double price, String description) {
+        this.id = id;
         this.name = name;
         this.price = price;
-        this.description = description;
-        this.metric = 0;
+        this.Description = description;
+    }
+
+    public StockAPI() {
+        // Default constructor
+    }
+
+    // Getters and Setters
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
-    public void setName(String name) { this.name = name; }
-
-    public double getPrice() {
-        return price;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    // The main setPrice used by child classes
-    public void setPrice(double price) {
+    public Double getPrice() {
+        return price;
+    }
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    @Override
-    public void setBid(String bid) {
-        setPrice(Double.parseDouble(bid));
+    public String getDescription() {
+        return Description;
+    }
+    public void setDescription(String description) {
+        this.Description = description;
+    }
+
+    public void setMetric(int metric) {
+        this.metric = metric;
     }
 
     @Override
@@ -38,24 +56,16 @@ public class StockAPI implements Tradable {
         return this.metric;
     }
 
-    public void setMetric(int metric) {
-        this.metric = metric;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
+    // By default, setting a bid just sets the price.
+    // Derived classes can override or use a strategy to do advanced logic.
+    @Override
+    public void setBid(String bid) {
+        this.setPrice(Double.parseDouble(bid));
     }
 
     @Override
     public String toString() {
-        return "Stock{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                ", metric=" + metric +
-                '}';
+        return "StockAPI [Description=" + Description + ", id=" + id
+                + ", name=" + name + ", price=" + price + ", metric=" + metric + "]";
     }
 }

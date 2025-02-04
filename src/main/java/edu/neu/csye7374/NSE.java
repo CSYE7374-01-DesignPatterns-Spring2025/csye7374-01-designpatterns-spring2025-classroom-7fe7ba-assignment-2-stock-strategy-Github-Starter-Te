@@ -48,7 +48,7 @@ public class NSE {
         System.out.println(appleStock);
 
         System.out.println("\n");
-        System.out.println("Apple Stocks are falling 40% due to bear market and Adobe Stocks are rising 40% due to bull market");
+        System.out.println("Apple Stocks are raising 40% due to bull market and Adobe Stocks are falling 40% due to bear market");
 
     }
 

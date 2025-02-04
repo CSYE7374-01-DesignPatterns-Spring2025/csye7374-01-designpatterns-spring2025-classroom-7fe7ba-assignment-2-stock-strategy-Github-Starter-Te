@@ -1,6 +1,6 @@
 package edu.neu.csye7374;
 
-public interface Tradable {
+public interface TradableAPI {
     /**     * place a bid to buy a stock
 
     *      * @param bid

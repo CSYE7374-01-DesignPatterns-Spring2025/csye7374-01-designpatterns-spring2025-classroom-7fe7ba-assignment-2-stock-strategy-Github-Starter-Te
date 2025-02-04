@@ -1,22 +1,31 @@
 package edu.neu.csye7374;
 
-public class StockAPI implements Tradable {
+public class Stock implements TradableAPI {
     private String id;
     private String name;
     private Double price;
     private String description;
     private int metric;
+    private MarketStrategyAPI marketStrategy;
 
-    public StockAPI() {
+    public Stock() {
 
     }
 
-    public StockAPI(String id, String name, Double price, String description, int metric) {
+    public Stock(String id, String name, Double price, String description, int metric) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
         this.metric = metric;
+    }
+
+    public void setMarketStrategy(MarketStrategyAPI strategy) {
+        this.marketStrategy = strategy;
+    }
+    
+    public void tradeStock() {
+        this.marketStrategy.tradeStock(this);
     }
 
     // Getters and Setters

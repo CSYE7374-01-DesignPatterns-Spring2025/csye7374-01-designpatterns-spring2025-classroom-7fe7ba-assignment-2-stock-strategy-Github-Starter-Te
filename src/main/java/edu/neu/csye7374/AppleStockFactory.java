@@ -1,10 +1,10 @@
 package edu.neu.csye7374;
 
 
-public class AppleStockFactory implements AbstractFactory {
+public class AppleStockFactory implements AbstractFactoryAPI {
     private static AppleStockFactory instance = null;
     @Override
-    public StockAPI createStock(String id, String name, Double price, String description, int metric) {
+    public Stock createStock(String id, String name, Double price, String description, int metric) {
         return new AppleStock(id, name, price, description, metric);
     }
 

@@ -1,6 +1,6 @@
 package edu.neu.csye7374;
 
-public class AdobeStock extends StockAPI {
+public class AdobeStock extends Stock {
     public AdobeStock(String id, String name, Double price, String description, int metric) {
         super(id, name, price, description, metric);
     }

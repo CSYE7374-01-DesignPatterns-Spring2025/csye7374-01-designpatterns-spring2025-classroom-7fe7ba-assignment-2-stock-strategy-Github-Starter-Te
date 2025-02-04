@@ -1,6 +1,6 @@
 package edu.neu.csye7374;
 
-public class AppleStock extends StockAPI {
+public class AppleStock extends Stock {
     public AppleStock(String id, String name, Double price, String description, int metric) {
         super(id, name, price, description, metric);
     }

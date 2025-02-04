@@ -9,7 +9,7 @@ public class AdobeStock extends StockAPI {
         this.strategy = new AdobeBullStrategy();
     }
 
-    // Optional: constructor that accepts a strategy explicitly
+    // Constructor that accepts a strategy explicitly
     public AdobeStock(String id, String name, Double price, String description, StockPriceStrategy strategy) {
         super(id, name, price, description);
         this.strategy = strategy;

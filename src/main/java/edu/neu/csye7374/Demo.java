@@ -2,7 +2,7 @@ package edu.neu.csye7374;
 
 public class Demo {
     public void startDemo() {
-        // Example usage of Factories (Factory Method + Singleton Factories)
+        // Usage of Factories (Factory Method + Singleton Factories)
         AdobeStockFactory adobeFactory = AdobeStockFactory.getInstance();
         AppleStockFactory appleFactory = AppleStockFactory.getInstance();
 

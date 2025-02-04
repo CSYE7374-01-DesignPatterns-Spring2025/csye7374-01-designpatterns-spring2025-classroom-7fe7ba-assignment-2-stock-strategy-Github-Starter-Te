@@ -19,7 +19,7 @@ public class AdobeBullStrategy implements StockPriceStrategy {
 
     @Override
     public int computeMetric(StockAPI stock, double newBid) {
-        // Example metric: difference * 2
+        // metric: difference * 2
         // (positive if newBid > currentPrice, negative if newBid < currentPrice)
         double diff = newBid - stock.getPrice();
         return (int) (diff * 2);

@@ -1,8 +1,6 @@
 package edu.neu.csye7374;
 
 public abstract class EagerSingletonAppleStockFactory implements AbstractFactory {
-    // The instance is declared as null but returned as an anonymous class
-    // Typically "eager" would be instantiated, but let's follow the structure given.
     private static final EagerSingletonAppleStockFactory instance = null;
 
     private EagerSingletonAppleStockFactory() {

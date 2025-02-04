@@ -47,6 +47,9 @@ public class NSE {
         nse.tradeStock(appleStock);
         System.out.println(appleStock);
 
+        System.out.println("\n");
+        System.out.println("Apple Stocks are falling 40% due to bear market and Adobe Stocks are rising 40% due to bull market");
+
     }
 
     

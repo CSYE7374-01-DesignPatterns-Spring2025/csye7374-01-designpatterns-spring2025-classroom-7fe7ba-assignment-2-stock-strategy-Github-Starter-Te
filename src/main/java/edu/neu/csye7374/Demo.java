@@ -2,8 +2,6 @@ package edu.neu.csye7374;
 
 public class Demo {
     public void startDemo() {
-        System.out.println("============Main Execution Start===================\n");
-
         // Example usage of Factories (Factory Method + Singleton Factories)
         AdobeStockFactory adobeFactory = AdobeStockFactory.getInstance();
         AppleStockFactory appleFactory = AppleStockFactory.getInstance();
@@ -25,7 +23,5 @@ public class Demo {
         System.out.println("\nUsing Singleton Factories:");
         System.out.println(adobeStock2);
         System.out.println(appleStock2);
-
-        System.out.println("\n============Main Execution End===================");
     }
 }
